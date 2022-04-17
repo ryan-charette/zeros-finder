@@ -13,10 +13,10 @@ while True:
     if degree == "1":
         linear_str = input("Enter a function in the form y = m * (x - a) + b    ")
         linear_values = linear_str.split()
-        m = int(linear_values[2])
+        m = float(linear_values[2])
         a_string = linear_values[6]
-        a = int(a_string[ : a_string.find(')')])
-        b = int(linear_values[8])
+        a = float(a_string[ : a_string.find(')')])
+        b = float(linear_values[8])
 
         # y = 0 = m * (x - a) + b
         # (-b/m) + a = x
@@ -31,10 +31,10 @@ while True:
         quadratic_str = input("Enter a function in the form y = ax^2 + bx + c    ")
         quadratic_values = quadratic_str.split()
         a_string = quadratic_values[2]
-        a = int(a_string[ : a_string.find('x')])
+        a = float(a_string[ : a_string.find('x')])
         b_string = quadratic_values[4]
-        b = int(b_string[ : b_string.find('x')])
-        c = int(quadratic_values[6])
+        b = float(b_string[ : b_string.find('x')])
+        c = float(quadratic_values[6])
 
         if quadratic_values[3] == "-": b = -b
         if quadratic_values[5] == "-": c = -c
